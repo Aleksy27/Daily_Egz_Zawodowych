@@ -1,0 +1,49 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#stopka, #baner {
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+
+nav {
+    background-color: peru;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+}
+
+article {
+    width: 80%;
+    height: 700px;
+    font-size: 120%;
+    overflow-y: auto;
+}
+
+aside {
+    float: right;
+    background-color: peru;
+    width: 20%;
+    height: 760px;
+    color: white;
+}
+
+a {
+    color: #ddd;
+    padding-left: 90px;
+    font-size: 140%;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+img {
+    margin: 30px;
+}
+
