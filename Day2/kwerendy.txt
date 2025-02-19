@@ -1,0 +1,4 @@
+kw1: SELECT nazwa FROM `marki`;
+kw2: SELECT model, rocznik, przebieg, paliwo, cena, zdjecie FROM `samochody` WHERE `id` = 10;
+kw3: SELECT `model`, `rocznik`, `cena`, `zdjecie`, `nazwa` FROM `samochody` AS s JOIN `marki` AS m ON s.id = m.id WHERE `wyrozniony` = 1;
+kw4: SELECT `model`, `cena`, `zdjecie` FROM `samochody` AS s JOIN `marki` AS m ON s.id = m.id WHERE `nazwa` = 'Audi';

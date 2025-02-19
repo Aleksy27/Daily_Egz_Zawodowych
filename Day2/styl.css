@@ -1,0 +1,32 @@
+* {
+    font-family: "Roboto", serif;
+}
+
+#baner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: crimson;
+    color: white;
+    gap: 5px;
+    word-spacing: 30px;
+    margin: 10px;
+}
+
+.tytul {
+    font-style: italic;
+}
+
+.pierwszy {
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px 10px 50px;
+    border: 1px solid crimson;
+}
+
+img > .pierwszy {
+    float: left;
+    height: 100%;
+}
+
