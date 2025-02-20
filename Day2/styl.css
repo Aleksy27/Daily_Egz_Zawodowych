@@ -13,10 +13,6 @@
     margin: 10px;
 }
 
-.tytul {
-    font-style: italic;
-}
-
 .pierwszy {
     background-color: mistyrose;
     height: 300px;
@@ -25,8 +21,41 @@
     border: 1px solid crimson;
 }
 
-img > .pierwszy {
+.pierwszy > img {
     float: left;
     height: 100%;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#stopka {
+    background-color: crimson;
+    color: white;
+}
+
+.drugi > article {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    margin: 1%;
+    background-color: snow;
+    height: 450px;
+    width: 21%;
+    text-align: center;
+    border: solid 1px crimson;
+}
+
+h4 {
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+
+.tytul {
+    font-style: italic;
+}
