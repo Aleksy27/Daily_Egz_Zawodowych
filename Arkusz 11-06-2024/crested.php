@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="style.css">
     <title>Hodowla Świnek Morskich</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
         <a href="crested.php">Rasa Crested</a>
     </nav>
     <article>
-        <img src="american.jpg" alt="Świnka morska rasy american">
+        <img src="crested.jpg" alt="Świnka morska rasy crested">
         <?php 
             $zapytanie2 = "SELECT DISTINCT s.data_ur, s.miot, r.rasa FROM swinki AS s JOIN rasy AS r ON s.rasy_id = r.id WHERE s.rasy_id = 1";
             $wynik2 = mysqli_query($conn, $zapytanie2);
