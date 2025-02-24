@@ -40,7 +40,7 @@
         <hr>
         <h2>Świnki w tym miocie</h2>
         <?php 
-            $zapytanie3 = "SELECT imie, cena, opis FROM swinki WHERE rasy_id = 1";
+            $zapytanie3 = "SELECT imie, cena, opis FROM swinki WHERE rasy_id = 7";
             $wynik3 = mysqli_query($conn, $zapytanie3);
             while($wiersz3 = mysqli_fetch_row($wynik3)){
                 echo "<h3> $wiersz3[0] - $wiersz3[1] zł </h3>";
