@@ -31,7 +31,7 @@
     <article>
         <img src="crested.jpg" alt="Świnka morska rasy crested">
         <?php 
-            $zapytanie2 = "SELECT DISTINCT s.data_ur, s.miot, r.rasa FROM swinki AS s JOIN rasy AS r ON s.rasy_id = r.id WHERE s.rasy_id = 1";
+            $zapytanie2 = "SELECT DISTINCT s.data_ur, s.miot, r.rasa FROM swinki AS s JOIN rasy AS r ON s.rasy_id = r.id WHERE s.rasy_id = 7";
             $wynik2 = mysqli_query($conn, $zapytanie2);
             while($wiersz2 = mysqli_fetch_row($wynik2)){
                 echo "<p>Data urodzenia: $wiersz2[0], Oznaczenie miotu: $wiersz2[1]</p>";
