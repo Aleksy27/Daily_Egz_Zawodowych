@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl4.css">
+    <title>Zamówienia hurtowe</title>
+</head>
+<body>
+    <div class="baner">
+        <h1>
+            Sieci komputerowe
+        </h1>
+    </div>
+    <div class="blok_lewy">
+        <h2>Sieci komputerowe</h2>
+        <p>Do wewnętrznego użytku firmy</p>
+        <img src="obraz.png" alt="sieć komputerowa">
+    </div>
+    <div class="blok_prawy">
+        <table>
+            <tr>
+                <th>Produkt</th>
+                <th>Jednostka</th>
+                <th>Dostępna ilość</th>
+                <th>Aktualizacja</th>
+                <th>Zamówienie</th>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td id="kolumna1">20</td>
+                <td><button type="button" onclick="Aktualizacja('kolumna1')">Aktualizuj</button></td>
+                <td><button type="button" onclick="Zamowienia('Skrętka U/UTP drut')">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td id="kolumna2">0</td>
+                <td><button type="button" onclick="Aktualizacja('kolumna2')">Aktualizuj</button></td>
+                <td><button type="button" onclick="Zamowienia('Skrętka U/UTP linka')">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td id="kolumna3">10</td>
+                <td><button type="button" onclick="Aktualizacja('kolumna3')">Aktualizuj</button></td>
+                <td><button type="button" onclick="Zamowienia('Wtyki 8P8C')">Zamów</button></td>
+            </tr>
+            <tr>
+                <td>Moduły Keystone</td>
+                <td>sztuki</td>
+                <td id="kolumna4">3</td>
+                <td><button type="button" onclick="Aktualizacja('kolumna4')">Aktualizuj</button></td>
+                <td><button type="button" onclick="Zamowienia('Moduły Keystone')">Zamów</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="stopka">
+        <a href="http://sieci.pl/">Nasza strona internetowa</a>
+        <p>Stronę przygotował: aleksy</p>
+    </div>
+    <script>
+        let id_zamowienia = 0;
+
+        function Braki() {
+            const komorki = ["kolumna1", "kolumna2", "kolumna3", "kolumna4"];
+
+            komorki.forEach(cell => {
+                const cos = document.getElementById(cell);
+                const komorka = parseInt(cos.textContent);
+
+                if (komorka == 0) {
+                    cos.style.backgroundColor = "red";
+                }
+
+                if (komorka >= 1 && komorka <= 5) {
+                    cos.style.backgroundColor = "yellow";
+                } 
+
+                if (komorka >= 6) {
+                    cos.style.backgroundColor = "Honeydew";
+                }
+            });
+        };
+
+        function Aktualizacja(id) {
+            const komorki = document.getElementById(id);
+
+            const ilosc = prompt("Podaj nową ilość:");
+            
+            komorki.textContent = ilosc;
+            
+            Braki();
+        }
+
+        function Zamowienia(nazwa) {
+            id_zamowienia++
+
+            alert(`Zamówienie nr: ${id_zamowienia} Produkt:  ${nazwa}`);
+        }
+
+        Braki();
+    </script>
+</body>
+</html>

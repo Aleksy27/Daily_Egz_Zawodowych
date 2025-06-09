@@ -1,0 +1,4 @@
+kw1: SELECT imie, nazwisko FROM kadra WHERE stanowisko = "fryzjer" OR stanowisko = "stylista";
+kw2: SELECT COUNT(*) liczba, MAX(cena) cena FROM uslugi;
+kw3:
+kw4: ALTER TABLE uslugi ADD COLUMN opinia text;

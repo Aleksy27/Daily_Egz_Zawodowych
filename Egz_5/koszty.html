@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Montaż paneli podłogowych</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="firma usługowa">
+    </header>
+    <nav>
+        <a href="index.html">Strona Główna</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztów montażu</h1>
+        <form action="" method="post">
+            Szerokość pomieszczenia [m]: <input type="text" id="szerokosc">
+            Długość pomieszczenia [m]: <input type="text" id="dlugosc">
+            <p>Typ panelu</p>           
+            <input type="radio" name="name" value="laminowe" id="laminowe"> Penele laminowe
+            <br>
+            <input type="radio" name="name" value="winylowe" id="winylowe"> Panele winylowe
+            <br>
+            <input type="radio" name="name" value="deska" id="deska"> Deska podłogowa
+            <br>
+            <button type="button" onClick="oblicz()">Oblicz</button>
+        </form>
+        <script>
+            function oblicz() {
+                const dlugosc = document.getElementById("dlugosc").value;
+                const szerokosc = document.getElementById("szerokosc").value;
+                const panele = document.querySelector(`input[name="name"]:checked`).value;
+
+                if (panele === "laminowe") {
+                    const powierzchnia = dlugosc * szerokosc;
+                    const koszt = powierzchnia * 12;
+                    document.getElementById("wynik").innerHTML = 
+                        `Pole powierzchni pomieszczenia: ${powierzchnia}, koszt montażu ${koszt}`
+                }
+                if (panele === "winylowe") {
+                    const powierzchnia = dlugosc * szerokosc;
+                    const koszt = powierzchnia * 14;
+                    document.getElementById("wynik").innerHTML = 
+                        `Pole powierzchni pomieszczenia: ${powierzchnia}, koszt montażu ${koszt}`
+                }
+                if (panele === "deska") {
+                    const powierzchnia = dlugosc * szerokosc;
+                    const koszt = powierzchnia * 18;
+                    document.getElementById("wynik").innerHTML = 
+                        `Pole powierzchni pomieszczenia: ${powierzchnia}, koszt montażu ${koszt}`
+                } else {
+                    document.getElementById("wynik").innerHTML = "Wprowadź poprawne dane.";
+                }
+            }
+        </script>
+        <p id="wynik"></p>
+    </main>
+    <footer>
+        <h5>Autor strony: 00000000000</h5>
+    </footer>
+</body>
+</html>

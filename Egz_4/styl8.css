@@ -1,0 +1,72 @@
+/* Domyślne wartości dla wszystkich selektorów */
+* {
+  font-family: Garamond, serif;
+  text-align: center;
+}
+
+/* Wspólne dla wszystkich bloków lewych */
+.lewy {
+  width: 72%;
+}
+
+/* Pierwszy blok w .lewy (nagłówek) */
+.lewy > .header {
+  background-color: #795548;
+  font-size: 170%;
+}
+
+/* Drugi blok w .lewy (kontener z obrazem) */
+.lewy > div:nth-of-type(2) {
+  height: 400px;
+}
+
+/* Wspólne dla obu bloków prawych */
+.prawy {
+  background-color: #BCAAA4;
+  color: #795548;
+  width: 28%;
+  height: 400px;
+}
+
+/* Stopka */
+.stopka {
+  background-color: #795548;
+  color: white;
+  padding: 20px;
+}
+
+/* Tabela */
+table {
+  margin: 0 auto;
+  width: 80%;
+  border: 1px solid #795548;
+  border-collapse: collapse;
+}
+
+/* Hover nad wierszem tabeli */
+table tr:hover {
+  background-color: sienna;
+  color: white;
+}
+
+/* Nagłówek czwartego stopnia */
+h4 {
+  font-size: 200%;
+}
+
+/* Obrazy */
+img {
+  margin: 20px;
+  border-radius: 40px;
+}
+
+/* Odnośniki */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Pole radio */
+input[type="radio"] {
+  margin: 7px;
+}
